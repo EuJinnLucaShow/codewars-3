@@ -8,21 +8,19 @@ Examples
 countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
 countBy(2,5) === [2,4,6,8,10]*/
 
-// function countBy(x, n) {
-//   let z = []
-//   for (let i = x; z.length < n; i++) if (i % x === 0) z.push(i)
-//   return z
-// }
-
 function countBy(x, n) {
-  const array = []
-
-  for (let i = 1; i <= n; i++) {
-    array.push(x * i)
-  }
-
-  return array
+  let z = []
+  for (let i = x; z.length < n; i++) if (i % x === 0) z.push(i)
+  return z
 }
+
+// function countBy(x, n) {
+//   const array = []
+//   for (let i = 1; i <= n; i++) {
+//     array.push(x * i)
+//   }
+//   return array
+// }
 
 console.log(countBy(1, 10)) //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(countBy(2, 5)) //  [2, 4, 6, 8, 10]
