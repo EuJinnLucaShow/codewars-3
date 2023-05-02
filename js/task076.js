@@ -1,7 +1,17 @@
-function combat(health, damage) {
-  return health - damage > 0 ? health - damage : 0
+function findMultiples(integer, limit) {
+  const array = []
+  for (let i = integer; i <= limit; i += integer) {
+    array.push(i)
+  }
+  return array
 }
 
-console.log(combat(100, 5)) // 95
-console.log(combat(92, 8)) // 84
-console.log(combat(20, 30)) // 0, 'Health cannot go below 0'
+console.log(findMultiples(5, 25))
+console.log(findMultiples(11, 54))
+console.log(findMultiples(5, 7))
+
+/*In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+
+FUNDAMENTALSARRAYS*/
